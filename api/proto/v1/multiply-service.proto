@@ -5,6 +5,7 @@ package v1;
 import "google/api/annotations.proto";
 import "protoc-gen-swagger/options/annotations.proto";
 
+
 option (grpc.gateway.protoc_gen_swagger.options.openapiv2_swagger) = {
   info: {
     title: "Multiply Service";
@@ -43,10 +44,12 @@ message NumberResponse {
 }
 
 service MultiplyService{
+
   rpc MultiplyNumbers(NumbersRequest) returns (NumberResponse) {
     option (google.api.http) = {
       post: "/v1/multiply"
       body: "*"
     };
   }
+
 }

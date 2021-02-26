@@ -23,21 +23,10 @@ func main() {
 			`
 				{
 					"api":"v1",
-					"number1":%f,
+					"number1":%d,
 					"number2":%f
 				}
-			`, 5, 3)))
-
-	resp, err := http.Post(*address+"/v1/todo", "application/json", strings.NewReader(fmt.Sprintf(`
-		{
-			"api":"v1",
-			"toDo": {
-				"title":"title (%s)",
-				"description":"description (%s)",
-				"reminder":"%s"
-			}
-		}
-	`, pfx, pfx, pfx)))
+			`, 5, 3.2)))
 
 	if err != nil {
 		log.Fatalf("failed to call multiply method: %v", err)
