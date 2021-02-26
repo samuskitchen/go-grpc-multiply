@@ -63,10 +63,7 @@ func Test_multiplyServiceServer_MultiplyNumbers(t *testing.T) {
 					Number2: 2,
 				},
 			},
-			want: &v1.NumberResponse{
-				Api:     "v1",
-				Number1: 10,
-			},
+			want: nil,
 			wantErr: true,
 		},
 	}

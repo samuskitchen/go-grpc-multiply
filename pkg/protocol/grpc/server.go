@@ -10,7 +10,7 @@ import (
 	"os/signal"
 )
 
-// RunServer runs gRPC service to publish ToDo service
+// RunServer runs gRPC service to publish multiply service
 func RunServer(ctx context.Context, v1API v1.MultiplyServiceServer, port string) error {
 	listen, err := net.Listen("tcp", ":"+port)
 	if err != nil {
